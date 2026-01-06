@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>My Invoices</h1>
+
+  <button (click)="createTestInvoice()" class="btn-create">
+    + Create Test Invoice
+  </button>
+
+  <div class="invoice-list">
+    <div *ngFor="let invoice of invoices" class="invoice-card">
+      <h3>{{ invoice.customerName }}</h3>
+      <p>Email: {{ invoice.customerEmail }}</p>
+      <p>Date: {{ invoice.issueDate }}</p>
+      <button (click)="deleteInvoice(invoice.id)" class="btn-delete">Delete</button>
+    </div>
+  </div>
+  
+  <p *ngIf="invoices.length === 0">No invoices found. Click the button above!</p>
+</div>
