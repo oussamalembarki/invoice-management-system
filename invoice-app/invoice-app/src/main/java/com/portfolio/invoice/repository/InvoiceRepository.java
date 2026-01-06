@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface InvoiceRepository extends JpaRepository<Invoice, Long> {
-    // We get methods like save(), findById(), findAll() for free!
+    
 }

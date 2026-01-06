@@ -14,19 +14,17 @@ public class InvoiceController {
     @Autowired
     private InvoiceService invoiceService;
 
-    // GET all invoices from the database
+    // Get all invoices from the database
     @GetMapping
     public List<Invoice> getAllInvoices() {
         return invoiceService.getAllInvoices();
     }
 
-    // POST (save) a new invoice sent from the frontend
     @PostMapping
     public Invoice createInvoice(@RequestBody Invoice invoice) {
         return invoiceService.saveInvoice(invoice);
     }
 
-    // DELETE an invoice using its ID
     @DeleteMapping("/{id}")
     public void deleteInvoice(@PathVariable Long id) {
         invoiceService.deleteInvoice(id);

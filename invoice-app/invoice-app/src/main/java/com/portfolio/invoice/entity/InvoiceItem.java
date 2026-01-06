@@ -20,9 +20,8 @@ public class InvoiceItem {
     
     private BigDecimal unitPrice;
 
-    // Connects back to the parent Invoice
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "invoice_id")
-    @JsonIgnore // Prevents infinite loops when converting to JSON
+    @JsonIgnore 
     private Invoice invoice;
 }

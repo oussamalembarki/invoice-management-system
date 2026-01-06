@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface InvoiceItemRepository extends JpaRepository<InvoiceItem, Long> {
-    // Empty for now, but we can add custom queries later if needed
+
 }
